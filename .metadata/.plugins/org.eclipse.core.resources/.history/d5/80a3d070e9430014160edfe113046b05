@@ -1,0 +1,97 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.KMDevelopers.volunteernow"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="20" />
+<permission
+        android:name="com.KMDevelopers.volunteernow.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+ 
+    <uses-permission android:name="com.KMDevelopers.volunteernow.permission.MAPS_RECEIVE" />
+ 
+      <!-- for card.io card scanning -->
+
+    
+
+    <!-- for most things, including card.io & paypal -->
+  
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+<!-- The following two permissions are not required to use
+     Google Maps Android API v2, but are recommended. -->
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+<uses-permission android:name="android.permission.VIBRATE" />
+<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission android:protectionLevel="signature"
+    android:name="com.parse.tutorials.pushnotifications.permission.C2D_MESSAGE" />
+<uses-permission android:name="com.KMDevelopers.volunteernow.pushnotifications.permission.C2D_MESSAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+         android:theme="@style/Theme.Example" >
+        
+        <activity android:name=".Home"
+                  android:label="VolunteerNow"
+                  android:screenOrientation = "portrait">
+             
+        
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+              <category android:name="android.intent.category.LAUNCHER" />
+
+               
+            </intent-filter>
+        </activity>
+        
+          <activity
+            android:name="com.KMDevelopers.volunteernow.VolunteerNowHome"
+            android:label="@string/app_name"
+            android:screenOrientation = "portrait">
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+              
+            </intent-filter>
+        </activity>
+          <activity android:name=".LoginActivity"
+                  android:label="Login"
+                  android:screenOrientation = "portrait"></activity>
+             <activity android:name=".RegisterActivity"
+                  android:label="Register New Account"
+                  android:screenOrientation = "portrait"></activity>
+               <activity android:name=".ForgetPassword"
+                  android:label="Forget Password"
+                  android:screenOrientation = "portrait"></activity>
+                  <activity android:name=".SelectClinic"
+            android:parentActivityName="com.KMDevelopers.volunteernow.BookADocHome"
+            android:screenOrientation = "portrait" >
+        <meta-data
+     android:name="com.google.android.maps.v2.API_KEY"
+     android:value="AIzaSyB0VFvM1A2lp9mzCE1aR7iYHCVZLYWyMx8" />
+
+
+ <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+               
+        
+    </application>
+
+</manifest>

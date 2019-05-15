@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="#f5f6f5"
+    
+    tools:context=".MainActivity" >
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        android:background="#cc7781" 
+        android:visibility="gone"
+        >
+       <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tba"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+android:textColor="#FFFFFF"
+android:gravity="center"
+        android:text="View Existing Booking"
+        android:textSize="20dp" />
+       
+         <TextView
+
+        android:id="@+id/tbb"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+android:textColor="#FFFFFF"
+android:gravity="center"
+        android:text="You have already made a booking."
+        android:textSize="15dp" />
+                <TextView
+android:layout_marginBottom="20dp"
+        android:id="@+id/tbc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+android:textColor="#FFFFFF"
+android:gravity="center"
+        android:text="Would you like to view it?"
+        android:textSize="15dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/top"
+        android:id="@+id/top2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        
+    </LinearLayout>
+
+
+                   <RelativeLayout
+                       android:layout_below="@+id/top2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#f5f6f5"
+     >
+          <TextView
+        
+        android:id="@+id/textViewa"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+android:textColor="#7D7D7D"
+        android:text="SELECT A NEARBY VOLUNTEER EVENT" />
+          <View
+              android:layout_marginTop="5dp"
+               android:id="@+id/textView2"
+                   android:layout_below="@+id/textViewa"
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="@android:color/darker_gray"/>
+<ListView
+    android:layout_marginTop="5dp"
+    android:layout_below="@+id/textView2"
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textViewff"
+            
+             />
+    <TextView
+         android:layout_marginTop="10dp"
+        android:id="@+id/textViewff"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="#e94256"
+        android:textSize="20dp"
+        android:text="View More Events" />
+ </RelativeLayout>
+</RelativeLayout>

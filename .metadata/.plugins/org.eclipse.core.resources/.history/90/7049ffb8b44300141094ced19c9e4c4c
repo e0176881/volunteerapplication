@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+
+ android:background="@drawable/bg123" 
+ android:scaleType="fitXY" 
+  > 
+
+  
+ 
+
+
+<ScrollView
+
+  android:id="@+id/bottom"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true"
+>
+  <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+         >
+ 
+        <!--  Header  Starts-->
+        <LinearLayout android:id="@+id/header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip"
+                   android:scaleType="fitXY"
+                             android:orientation="vertical"
+                             android:layout_gravity="center_horizontal">
+                <!-- Logo Start-->
+        <ImageView
+                android:id="@+id/ImageView3_Left"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:maxWidth="100dp"
+    android:maxHeight="100dp"
+   android:scaleType="fitXY"
+   android:layout_marginTop="40dip"
+                             android:orientation="vertical"
+                             android:layout_gravity="center_horizontal"
+				android:background="@drawable/volunteernow"
+
+                ></ImageView>
+          <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="VolunteerNow"
+                android:layout_marginTop="20dip"
+                android:textSize="25dip"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/tv1"
+                />
+                 <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Start Volunteering Now!"
+                android:layout_marginTop="40dip"
+                android:textSize="20dip"
+                android:gravity="center"
+                android:id="@+id/tv2"
+                />
+                     <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Sign Up Now!"
+                android:textSize="20dip"
+                android:gravity="center"
+                android:id="@+id/tv3"
+                />
+                      <LinearLayout android:id="@+id/header2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                   android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+                   android:scaleType="fitXY"
+                   android:layout_marginTop="40dip"
+                             android:orientation="vertical"
+                             android:layout_gravity="center_horizontal">
+                   
+                     </LinearLayout>
+                <!-- Logo Ends -->
+        </LinearLayout>
+        <!--  Header Ends -->
+
+ 
+        <!-- Login Form -->
+        <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="10dip"
+          android:layout_below="@id/header">
+          <!--  Email Label -->
+ 
+          <Button android:id="@+id/btnBook"
+                  android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dip"
+                android:text="Login"
+android:textSize="20dip"
+android:alpha="1" 
+android:textColor="#FFFFFF"
+android:background="@drawable/buttonstyle"
+                 />
+                   <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Register"
+                android:id="@+id/btnLogin"
+                android:layout_marginTop="10dip"
+                android:textSize="18dip"
+                android:gravity="center"
+                />
+  <TextView 
+	android:id="@+id/tv"  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text=""
+    />
+        </LinearLayout>
+        <!-- Login Form Ends -->
+
+      
+
+  </RelativeLayout>
+</ScrollView>
+</RelativeLayout>
